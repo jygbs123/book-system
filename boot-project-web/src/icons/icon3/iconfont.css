@@ -1,0 +1,92 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 3177575 */
+  src: url('iconfont.woff2?t=1644560342859') format('woff2'),
+       url('iconfont.woff?t=1644560342859') format('woff'),
+       url('iconfont.ttf?t=1644560342859') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="el-icon-third"], 
+[class*=" el-icon-third"]/*这里有空格*/
+
+{ font-family: "iconfont" !important;
+
+font-size: 16px;
+
+font-style: normal;
+
+-webkit-font-smoothing: antialiased;
+
+-moz-osx-font-smoothing: grayscale; }        
+
+.el-icon-thirdduzheguanli1:before {
+  content: "\e602";
+}
+
+.el-icon-thirdtushuliebiao-miaoxian:before {
+  content: "\e66b";
+}
+
+.el-icon-thirdjieshuguanli:before {
+  content: "\e696";
+}
+
+.el-icon-thirdhuanshuguanli:before {
+  content: "\e72b";
+}
+
+.el-icon-thirdduzheliebiao:before {
+  content: "\e613";
+}
+
+.el-icon-thirdgonggaoliebiao:before {
+  content: "\e634";
+}
+
+.el-icon-thirdduzheguanli:before {
+  content: "\e76a";
+}
+
+.el-icon-thirdgonggaoguanli:before {
+  content: "\e61c";
+}
+
+.el-icon-thirdnavicon-gggl:before {
+  content: "\e666";
+}
+
+.el-icon-thirdgonggaoguanli1:before {
+  content: "\e6ea";
+}
+
+.el-icon-thirdshouye:before {
+  content: "\e612";
+}
+
+.el-icon-thirdjiaoseguanli:before {
+  content: "\e618";
+}
+
+.el-icon-thirdtushuguanli:before {
+  content: "\e66e";
+}
+
+.el-icon-thirdjieyueguanli:before {
+  content: "\e688";
+}
+
+.el-icon-thirdfenlei1:before {
+  content: "\e608";
+}
+
+.el-icon-thirdjieyueguanli1:before {
+  content: "\e733";
+}
+

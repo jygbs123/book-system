@@ -1,0 +1,36 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.itmk.web.sys_books.mapper.SysBooksMapper">
+    <select id="getList" resultType="com.itmk.web.sys_books.entity.SysBooks">
+        select b.*,c.category_name from sys_books as b , sys_category as c where b.category_id = c.category_id
+        <if test="parm.categoryId != null and parm.categoryId !=''">
+            and c.category_id =#{parm.categoryId}
+        </if>
+        <if test="parm.bookName != null and parm.bookName !=''">
+            and b.book_name like CONCAT('%',#{parm.bookName},'%')
+        </if>
+        <if test="parm.bookPlaceNum != null and parm.bookPlaceNum !=''">
+            and b.book_place_num like CONCAT('%',#{parm.bookPlaceNum},'%')
+        </if>
+        <if test="parm.bookAuther != null and parm.bookAuther !=''">
+            and b.book_auther like CONCAT('%',#{parm.bookAuther},'%')
+        </if>
+    </select>
+    <update id="subBook">
+        update sys_books set book_store = book_store -1 where book_id =#{bookId} and book_store > 0
+    </update>
+    <update id="addBook">
+        update sys_books set book_store = book_store + 1 where book_id =#{bookId}
+    </update>
+    <select id="getHotBook" resultType="com.itmk.web.sys_books.entity.BookVo">
+    select bk.book_name as name,count(b.reader_id) as value
+    from borrow_book as b
+    left join sys_books as bk
+    on b.book_id = bk.book_id
+    group by b.book_id
+    order by value desc limit 10
+
+    </select>
+</mapper>

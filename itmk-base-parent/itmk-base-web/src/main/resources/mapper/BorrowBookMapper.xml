@@ -1,0 +1,86 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.itmk.web.book_borrow.mapper.BorrowBookMapper">
+    <select id="getBorrowList" resultType="com.itmk.web.book_borrow.entity.ReturnBook">
+        select  b.borrow_id,b.book_id,sb.book_name,sb.book_place_num,
+        sr.username,sr.learn_num,sr.class_name,sr.phone,b.borrow_time,b.return_time,b.borrow_status
+        from borrow_book as b left join sys_books as sb on b.book_id = sb.book_id
+        left join sys_reader as sr on sr.reader_id =  b.reader_id where 1=1
+        <if test="parm.username != null and parm.username != ''">
+           and sr.username =#{parm.username}
+        </if>
+        <if test="parm.borrowStatus != null and parm.borrowStatus != ''">
+           and b.borrow_status =#{parm.borrowStatus}
+        </if>
+        order by b.borrow_time asc
+    </select>
+    <select id="getLookBorrowList" resultType="com.itmk.web.book_borrow.entity.LookBorrow">
+        select t.* from (
+        select  b.borrow_id,b.book_id,sb.book_name,sb.book_place_num,
+        sr.username,sr.learn_num,sr.class_name,sr.phone,b.borrow_time,b.return_time,b.borrow_status,
+				b.apply_status,b.return_status,b.excepion_text,b.apply_text,
+				case when b.return_time &lt; now() then '1' else '0' end as time_status
+        from borrow_book as b left join sys_books as sb on b.book_id = sb.book_id
+        left join sys_reader as sr on sr.reader_id =  b.reader_id )t
+        where 1=1
+         <if test="parm.username != null and parm.username !=''">
+            and t.username =#{parm.username}
+        </if>
+        <if test="parm.borrowStatus != null and parm.borrowStatus !=''">
+            and t.borrow_status =#{parm.borrowStatus}
+        </if>
+        <if test="parm.learnNum != null and parm.learnNum !=''">
+            and t.learn_num  like CONCAT('%',#{parm.learnNum},'%')
+        </if>
+        <if test="parm.bookName != null and parm.bookName !=''">
+            and t.book_name  like CONCAT('%',#{parm.bookName},'%')
+        </if>
+        <if test="parm.applyStatus != null and parm.applyStatus !=''">
+            and t.apply_status =#{parm.applyStatus}
+        </if>
+        <if test="parm.returnStatus != null and parm.returnStatus !=''">
+            and t.return_status =#{parm.returnStatus}
+        </if>
+        <if test="parm.timeStatus != null and parm.timeStatus !=''">
+            and t.time_status =#{parm.timeStatus}
+        </if>
+        order by t.borrow_time desc
+    </select>
+    <select id="getReaderLookBorrowList" resultType="com.itmk.web.book_borrow.entity.LookBorrow">
+        select t.* from (
+        select  b.reader_id,b.borrow_id,b.book_id,sb.book_name,sb.book_place_num,
+        sr.username,sr.learn_num,sr.class_name,sr.phone,b.borrow_time,b.return_time,b.borrow_status,
+				b.apply_status,b.return_status,b.excepion_text,b.apply_text,
+				case when b.return_time &lt; now() then '1' else '0' end as time_status
+        from borrow_book as b left join sys_books as sb on b.book_id = sb.book_id
+        left join sys_reader as sr on sr.reader_id =  b.reader_id )t
+        where 1=1
+        <if test="parm.userId != null and parm.userId !=''">
+            and t.reader_id =#{parm.userId}
+        </if>
+         <if test="parm.username != null and parm.username !=''">
+            and t.username =#{parm.username}
+        </if>
+        <if test="parm.borrowStatus != null and parm.borrowStatus !=''">
+            and t.borrow_status =#{parm.borrowStatus}
+        </if>
+        <if test="parm.learnNum != null and parm.learnNum !=''">
+            and t.learn_num  like CONCAT('%',#{parm.learnNum},'%')
+        </if>
+        <if test="parm.bookName != null and parm.bookName !=''">
+            and t.book_name  like CONCAT('%',#{parm.bookName},'%')
+        </if>
+        <if test="parm.applyStatus != null and parm.applyStatus !=''">
+            and t.apply_status =#{parm.applyStatus}
+        </if>
+        <if test="parm.returnStatus != null and parm.returnStatus !=''">
+            and t.return_status =#{parm.returnStatus}
+        </if>
+        <if test="parm.timeStatus != null and parm.timeStatus !=''">
+            and t.time_status =#{parm.timeStatus}
+        </if>
+        order by t.borrow_time desc
+    </select>
+</mapper>

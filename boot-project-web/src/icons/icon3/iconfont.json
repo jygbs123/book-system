@@ -1,0 +1,121 @@
+{
+  "id": "3177575",
+  "name": "elicon",
+  "font_family": "iconfont",
+  "css_prefix_text": "el-icon-third",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "2852531",
+      "name": "读者管理",
+      "font_class": "duzheguanli1",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "3298614",
+      "name": "图书列表-描线",
+      "font_class": "tushuliebiao-miaoxian",
+      "unicode": "e66b",
+      "unicode_decimal": 58987
+    },
+    {
+      "icon_id": "6712935",
+      "name": "借书管理",
+      "font_class": "jieshuguanli",
+      "unicode": "e696",
+      "unicode_decimal": 59030
+    },
+    {
+      "icon_id": "8760229",
+      "name": "还书管理",
+      "font_class": "huanshuguanli",
+      "unicode": "e72b",
+      "unicode_decimal": 59179
+    },
+    {
+      "icon_id": "21458657",
+      "name": "读者列表",
+      "font_class": "duzheliebiao",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
+      "icon_id": "22882328",
+      "name": "公告列表",
+      "font_class": "gonggaoliebiao",
+      "unicode": "e634",
+      "unicode_decimal": 58932
+    },
+    {
+      "icon_id": "2351685",
+      "name": "读者管理",
+      "font_class": "duzheguanli",
+      "unicode": "e76a",
+      "unicode_decimal": 59242
+    },
+    {
+      "icon_id": "2959020",
+      "name": "公告管理",
+      "font_class": "gonggaoguanli",
+      "unicode": "e61c",
+      "unicode_decimal": 58908
+    },
+    {
+      "icon_id": "3703037",
+      "name": "公告管理",
+      "font_class": "navicon-gggl",
+      "unicode": "e666",
+      "unicode_decimal": 58982
+    },
+    {
+      "icon_id": "5186155",
+      "name": "公告管理",
+      "font_class": "gonggaoguanli1",
+      "unicode": "e6ea",
+      "unicode_decimal": 59114
+    },
+    {
+      "icon_id": "9839295",
+      "name": "首页",
+      "font_class": "shouye",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
+      "icon_id": "10213489",
+      "name": "角色管理",
+      "font_class": "jiaoseguanli",
+      "unicode": "e618",
+      "unicode_decimal": 58904
+    },
+    {
+      "icon_id": "10327774",
+      "name": "图书管理",
+      "font_class": "tushuguanli",
+      "unicode": "e66e",
+      "unicode_decimal": 58990
+    },
+    {
+      "icon_id": "14262249",
+      "name": "借阅管理",
+      "font_class": "jieyueguanli",
+      "unicode": "e688",
+      "unicode_decimal": 59016
+    },
+    {
+      "icon_id": "19728413",
+      "name": "图书分类",
+      "font_class": "fenlei1",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "20301273",
+      "name": "借阅管理",
+      "font_class": "jieyueguanli1",
+      "unicode": "e733",
+      "unicode_decimal": 59187
+    }
+  ]
+}
