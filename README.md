@@ -11,7 +11,7 @@
 涉及技术均为当前比较新进技术架构，难度适中，非常适合作为设计或学习使用。<br>
 
 ## 技术服务
-<img src="./images/001.jpg" width="200" height="300" />
+<img src="./images/001.jpg" width="200" height="200" />
 
 ## 技术栈
 
